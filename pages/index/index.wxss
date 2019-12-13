@@ -1,0 +1,89 @@
+.index-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.swiper {
+  width: 100%;
+  height: 90%;
+}
+
+.swiper-item {
+  overflow: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+
+.uploader {
+  font-size: 32rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  height: 8%;
+  text-align: left;
+}
+
+.content {
+  border-radius: 20rpx;
+  width: 80%;
+  height: 80%;
+  border: 1rpx solid #ccc;
+  box-shadow: 5rpx 5rpx 60rpx #ccc;
+  padding: 30rpx 50rpx;
+  display: flex;
+  flex-flow: column;
+  box-sizing: border-box;
+  overflow: hidden;
+  justify-content: flex-end;
+}
+
+.content text {
+  font-size: 50rpx;
+  flex-grow: 1;
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content .author {
+  text-align: right;
+  height: 60rpx;
+  flex-shrink: 0;
+  font-size: 34rpx;
+}
+
+.bottom {
+  /*margin-top: 30rpx;*/
+  width: 80%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.bottom .btn {
+  display: flex;
+  padding: 5rpx 10rpx;
+  font-size: 30rpx;
+  justify-content: center;
+  align-items: center;
+  border: 1rpx solid #ccc;
+  line-height: normal;
+  background: none;
+  border-radius: unset;
+  color: #666;
+}
+
+.bottom .btn:after {
+  content: unset;
+}
+
+/* .bottom .none-click {
+  color: #999;
+} */

@@ -1,23 +1,23 @@
 {
-	"pages": [
-		"pages/index/index",
-		"pages/accumulation/accumulation",
-		"pages/mine/mine"
-	],
-	"window": {
-		"backgroundTextStyle": "light",
-		"navigationBarBackgroundColor": "#333333",
-		"navigationBarTitleText": "首页",
-		"navigationBarTextStyle": "white"
-	},
-	
-	"sitemapLocation": "sitemap.json",
-	"navigateToMiniProgramAppIdList": [
-		"wx50f030c7f4a897ff"
-	],
-	"permission": {
-		"scope.userLocation": {
-			"desc": "你的位置信息将用于小程序位置接口的效果展示"
-		}
-	}
+  "pages": [
+    "pages/index/index",
+    "pages/release/release",
+    "pages/mine/mine"
+  ],
+  "window": {
+		"backgroundColor": "#333333",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#333333",
+    "navigationBarTitleText": "斯是陋室，惟吾德馨",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "navigateToMiniProgramAppIdList": [
+    "wx50f030c7f4a897ff"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
 }

@@ -1,2 +1,20 @@
-<view>首页</view>
-<text>{{url}}</text>
+<view class="container index-body">
+  <swiper class="swiper" current='{{arr_aphorisms.length-1}}'>
+    <block wx:for="{{arr_aphorisms}}" wx:key="index">
+      <swiper-item class="swiper-item" data-id="{{index}}">
+        <view class="uploader">来自：{{item.uploader}}</view>
+        <view class="content">
+          <text>{{item.content}}</text>
+          <view class="author">——{{item.author}}</view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="bottom">
+    <!--<view class="btn {{prev_show?'':'none-click'}}" bindtap="prev_click">{{prev_text}}</view>-->
+    <!--<view class="btn">留下我的足迹</view>-->
+    <navigator wx:if="{{is_auth}}" url="/pages/release/release" class="btn">留下我的足迹</navigator>
+    <button wx:else class="btn" bindgetuserinfo="getUserInfo" open-type="getUserInfo">留下我的足迹</button>
+    <!--<view class="btn {{next_show?'':'none-click'}}" bindtap="next_click">{{next_text}}</view>-->
+  </view>
+</view>

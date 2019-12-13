@@ -1,9 +1,34 @@
 //app.js
+var Bmob = require('/utils/Bmob-2.2.1.min.js');
+const utils = require('/utils/util');
+
 App({
-  count: {
-    url: 'www.ganrongjian.cn'
+  onLaunch: function() {
+    let that = this;
+    Bmob.initialize(that.config.secret_key, that.config.API_key);
+    // Bmob.debug(true);
+  },
+  config: {
+    secret_key: '4820b283f8489834',
+    API_key: 'GRJ526',
+    url: 'www.ganrongjian.cn',
+    app_auth: false
+  },
+  bmob_data() {
+    return Bmob.Query('aphorisms')
+  },
+  bmob_user() {
+    return Bmob.Query('_User')
+  },
+  login(detail, callback) {
+    Bmob.User.auth().then(res => {
+      Bmob.User.upInfo(detail);
+      callback(res);
+    }).catch(err => {
+      console.log(err);
+    });
   }
-})
+});
 
 //app.json文件中底部tabBar代码
 // "tabBar": {
