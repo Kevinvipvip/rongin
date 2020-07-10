@@ -12,10 +12,11 @@ Page({
     is_auth: false
   },
 
-  /**
-   * 生命周期函数--监听页面加载
+   /**
+   * 生命周期函数--监听页面显示
    */
-  onLoad: function() {
+  onShow: function() {
+    this.data.arr_aphorisms = [];
     let that = this;
     wx.getSetting({
       success(res) {
@@ -59,6 +60,7 @@ Page({
       title: '加载中'
     });
     app.bmob_data().find().then(res => {
+      // console.log(res);
       res.filter((item) => {
         if (item.is_show === 2) {
           item.date = new Date(item.createdAt).getTime();
@@ -71,20 +73,12 @@ Page({
       this.setData({
         arr_aphorisms: this.data.arr_aphorisms
       });
-      // console.log(this.data.arr_aphorisms);
+      console.log(this.data.arr_aphorisms);
       if (callback) {
         callback();
       }
       wx.hideLoading();
     });
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function() {
-    this.data.arr_aphorisms = [];
-    this.onLoad()
   },
   // prev_click() {
   //   if (this.data.prev_show) {

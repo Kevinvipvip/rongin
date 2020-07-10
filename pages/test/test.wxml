@@ -1,0 +1,5 @@
+<!--pages/test/test.wxml-->
+<input bindinput="get_input_value" placeholder="请登录创建我的名片或查看他人名片" style="height:160rpx"></input>
+<button bindtap="submit_data">提交</button>
+<view>输入值：{{order_num}}</view>
+<view>提交值：{{order}}</view>
